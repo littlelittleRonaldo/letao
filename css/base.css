@@ -1,0 +1,26 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+ul {
+  list-style: none;
+}
+img {
+  width: 100%;
+  display: block;
+}
+.mui-bar {
+  background-color: #006699;
+  color: #fff;
+}
+.mui-bar .mui-tab-item,
+.mui-bar h1 {
+  color: #fff;
+}
+.mui-bar .mui-active {
+  color: darkorange!important;
+}
+body,
+.mui-content {
+  background-color: #fff;
+}

@@ -1,0 +1,56 @@
+.nav-link {
+  padding: 10px;
+}
+.nav-link li {
+  width: 33.33%;
+  float: left;
+}
+.brand {
+  padding: 0 10px;
+}
+.brand li {
+  width: 25%;
+  float: left;
+}
+.product {
+  padding: 10px;
+}
+.product .title {
+  margin: 10px 0;
+}
+.product li {
+  width: 50%;
+  float: left;
+  padding: 5px;
+}
+.product li a {
+  box-shadow: 0 0 5px #ccc;
+  display: block;
+  padding: 0 5px 5px;
+}
+.product li a .name {
+  color: #8f8f94;
+  font-size: 14px;
+  text-align: center;
+  display: block;
+  padding: 6px;
+}
+.product li a p {
+  font-size: 12px;
+  text-align: center;
+}
+.product li a p span:first-child {
+  margin-right: 2px;
+  color: #f30;
+}
+.product li a p span:last-child {
+  margin-left: 2px;
+  color: #ccc;
+  text-decoration: line-through;
+}
+.product li a .buy-now {
+  margin: 0 auto ;
+  display: block;
+  background-color: #006699;
+  color: #fff;
+}
