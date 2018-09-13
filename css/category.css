@@ -10,14 +10,14 @@
 .my-content .category-right {
   height: 100%;
   position: relative;
-  background-color: #fff;
 }
 .my-content .category-left {
   float: left;
   width: 80px;
+  background-color: #fff;
 }
 .my-content .category-right {
-  margin-left: 80px;
+  margin-left: 90px;
   height: 100%;
 }
 .my-content .link a {
@@ -27,15 +27,16 @@
   text-align: center;
   display: block;
   font-size: 14px;
-  border-right: #e0e0e0;
-  border-bottom: #e0e0e0;
+  border-right: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
 }
-.my-content .link .active {
+.my-content .link .active a {
   background-color: #f5f5f5;
   border-right: 0;
 }
 .my-content .brand-list {
   margin-top: 10px;
+  background-color: #fff;
 }
 .my-content .brand-list li {
   width: 33.33%;
@@ -46,4 +47,8 @@
 }
 .my-content .brand-list li p {
   text-align: center;
+}
+.my-content .brand-list .noResult {
+  color: #f20;
+  font-size: 14px;
 }
