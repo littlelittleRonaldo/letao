@@ -14,7 +14,8 @@ img {
   color: #fff;
 }
 .mui-bar .mui-tab-item,
-.mui-bar h1 {
+.mui-bar h1,
+.mui-bar a {
   color: #fff;
 }
 .mui-bar .mui-active {
@@ -23,4 +24,7 @@ img {
 body,
 .mui-content {
   background-color: #fff;
+}
+i {
+  font-style: normal;
 }
