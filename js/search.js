@@ -18,6 +18,7 @@ $(function(){
     $('.clear').on('tap',function(){
         $('.mui-table-view').html('');
         localStorage.removeItem('keyArr');
+        keyArr = [];
     })
     $('.mui-table-view').on('tap','li',function(){
         var keyword = $(this).children().eq(0).text();
