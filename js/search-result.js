@@ -1,4 +1,9 @@
 $(function(){
+    var html = '';
+    var page = 1;
+    var priceSort = 1;
+    var numSort = 1;
+    var This;
     function getParamsByUrl(url,name) {
         var params = url.substr(url.indexOf('?')+1).split('&');
         for(var i=0; i<params.length;i++){
@@ -10,15 +15,17 @@ $(function(){
         return null;
     }
     var keyword = getParamsByUrl(location.href,'keyword');
-    var html = '';
-    var page = 1;
     function getData() {
-        var This = this;
+        if(!This){
+            This = this;
+        }
         $.ajax({
             type:'get',
             url:'/product/queryProduct',
             data:{
                 porname:keyword,
+                price:priceSort,
+                num:numSort,
                 page:page++,
                 pageSize:3
             },
@@ -33,7 +40,7 @@ $(function(){
                 
             }
         });
-    }
+    }   
     mui.init({
         pullRefresh : {
           container:'#refreshContainer',//待刷新区域标识，querySelector能定位的css选择器均可，比如：id、.class等
@@ -45,5 +52,21 @@ $(function(){
             callback :getData //必选，刷新函数，根据具体业务来编写，比如通过ajax从服务器获取新数据；
           }
         }
-      });
+    });
+    $('#price').on('tap',function(){
+        priceSort = priceSort == 1 ?2 :1;
+        html = '';
+        page = 1;
+        getData();
+        mui('#refreshContainer').pullRefresh().refresh(true);
+        $(this).children('i').toggleClass('mui-icon mui-icon-arrowup').toggleClass('mui-icon mui-icon-arrowdown');
+    });
+    $('#num').on('tap',function(){
+        numSort = numSort == 1 ?2 :1;
+        html = '';
+        page = 1;
+        getData();
+        mui('#refreshContainer').pullRefresh().refresh(true);
+        $(this).children('i').toggleClass('mui-icon mui-icon-arrowup').toggleClass('mui-icon mui-icon-arrowdown');
+    });
 })
