@@ -7,7 +7,7 @@ $(function(){
             localStorage.setItem('keyArr',JSON.stringify(keyArr));
             location.href = "search-result.html?keyword="+keyword;
         }else {
-            alert("不能搜索空！");
+            mui.alert("不能搜索空！");
         }
     });
     if(localStorage.getItem('keyArr')){

@@ -4,6 +4,8 @@ $(function(){
     var priceSort = 1;
     var numSort = 1;
     var This;
+    var p = 1;
+    var n = 1;
     function getParamsByUrl(url,name) {
         var params = url.substr(url.indexOf('?')+1).split('&');
         for(var i=0; i<params.length;i++){
@@ -43,7 +45,7 @@ $(function(){
     }   
     mui.init({
         pullRefresh : {
-          container:'#refreshContainer',//待刷新区域标识，querySelector能定位的css选择器均可，比如：id、.class等
+          container:refreshContainer,//待刷新区域标识，querySelector能定位的css选择器均可，比如：id、.class等
           up : {
             height:50,//可选.默认50.触发上拉加载拖动距离
             auto:true,//可选,默认false.自动上拉加载一次
@@ -54,12 +56,15 @@ $(function(){
         }
     });
     $('#price').on('tap',function(){
-        priceSort = priceSort == 1 ?2 :1;
+        priceSort = priceSort == 1 ?2 :1; 
         html = '';
         page = 1;
         getData();
         mui('#refreshContainer').pullRefresh().refresh(true);
-        $(this).children('i').toggleClass('mui-icon mui-icon-arrowup').toggleClass('mui-icon mui-icon-arrowdown');
+        // $(this).children('i').toggleClass('mui-icon mui-icon-arrowup').toggleClass('mui-icon mui-icon-arrowdown');
+        $(this).children('i').css('transform','rotate('+p*180+'deg)');
+        p = p == 1 ?0 :1;
+        // p++;
     });
     $('#num').on('tap',function(){
         numSort = numSort == 1 ?2 :1;
@@ -67,6 +72,8 @@ $(function(){
         page = 1;
         getData();
         mui('#refreshContainer').pullRefresh().refresh(true);
-        $(this).children('i').toggleClass('mui-icon mui-icon-arrowup').toggleClass('mui-icon mui-icon-arrowdown');
+        // $(this).children('i').toggleClass('mui-icon mui-icon-arrowup').toggleClass('mui-icon mui-icon-arrowdown');
+        $(this).children('i').css('transform','rotate('+n*180+'deg)');
+        n++;
     });
 })

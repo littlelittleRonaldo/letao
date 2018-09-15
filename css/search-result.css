@@ -9,6 +9,7 @@
 }
 .filter i {
   font-size: 12px;
+  transition: all .3s;
 }
 .product {
   padding: 10px;
