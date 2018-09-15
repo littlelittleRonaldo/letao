@@ -1,0 +1,24 @@
+.getCode {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: #006699;
+    font-size: 14px;
+}
+.mui-input-row label {
+    font-size: 14px;
+}
+.registerBox {
+    padding: 0 10px;
+}
+.register-btn,
+.login-btn,
+.modify-btn {
+    background-color: #006699;
+    margin-top: 20px;
+    width: 100%;
+}
+.mui-input-group:after {
+    display: none;
+}

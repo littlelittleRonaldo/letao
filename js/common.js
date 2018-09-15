@@ -8,4 +8,7 @@ $(function(){
             url:$(this).attr('href')
         })
     })
+    $('mui-tab-item').on('tap',function(){
+        $(this).addClass('.mui-active').siblings().remoeClass('.mui-active');
+    })
 })
