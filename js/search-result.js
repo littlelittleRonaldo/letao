@@ -55,7 +55,7 @@ $(function(){
           }
         }
     });
-    $('#price').on('tap',function(){
+    $('#price').on('click',function(){
         priceSort = priceSort == 1 ?2 :1; 
         html = '';
         page = 1;
@@ -65,6 +65,7 @@ $(function(){
         $(this).children('i').css('transform','rotate('+p*180+'deg)');
         p = p == 1 ?0 :1;
         // p++;
+        mui('#refreshContainer').scroll().scrollTo(0,0,100);//100毫秒滚动到顶
     });
     $('#num').on('tap',function(){
         numSort = numSort == 1 ?2 :1;
@@ -75,5 +76,6 @@ $(function(){
         // $(this).children('i').toggleClass('mui-icon mui-icon-arrowup').toggleClass('mui-icon mui-icon-arrowdown');
         $(this).children('i').css('transform','rotate('+n*180+'deg)');
         n++;
+        mui('.mui-scroll-wrapper').scroll().scrollTo(0,0,100);
     });
 })

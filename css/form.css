@@ -3,7 +3,7 @@
     top: 50%;
     right: 10px;
     transform: translateY(-50%);
-    color: #006699;
+    color: deepskyblue;
     font-size: 14px;
 }
 .mui-input-row label {
@@ -15,7 +15,7 @@
 .register-btn,
 .login-btn,
 .modify-btn {
-    background-color: #006699;
+    background-color: deepskyblue;
     margin-top: 20px;
     width: 100%;
 }
