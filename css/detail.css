@@ -21,6 +21,7 @@
   padding: 10px;
   border-bottom: 1px solid #ccc;
   font-size: 14px;
+  line-height: 28px;
 }
 .size span {
   display: inline-block;
@@ -31,9 +32,8 @@
   border: 1px solid #ccc;
   margin: 0 0 10px 10px;
 }
-.size span .active {
-  border: 1px solid red;
-  background-color: regb(123, 123, 123, 0.3);
+.size span.active {
+  background-color: rgba(0, 191, 255, 0.7);
 }
 .num {
   padding: 10px;
@@ -46,6 +46,10 @@
   line-height: 28px;
   text-align: center;
   border: 1px solid #ccc;
+}
+.num span.count {
+  border-right: none;
+  border-left: none;
 }
 .cart {
   padding: 10px;

@@ -1,11 +1,12 @@
 $(function(){
-    if(localStorage.getItem('editAddress')){
-        var address = JSON.parse(localStorage.getItem('editAddress'));
-        var html = template('tpl',address);
-        $('.mui-input-group').html(html);
-    }else {
+    if(!localStorage.getItem('editAddress')){
         return;
     }
+    var address = JSON.parse(localStorage.getItem('editAddress'));
+    var html = template('tpl',address);
+    $('.mui-input-group').html(html);
+    localStorage.removeItem('editAddress');
+
     var picker = new mui.PopPicker({layer:3});
     picker.setData(cityData); 
     $('#city').on('tap',function(){
@@ -13,6 +14,7 @@ $(function(){
             $('#city').val(selectItems[0].text+selectItems[1].text+(selectItems[2].text || ''));
         })
     })
+
     var id = address.id;
     $('.mui-input-group').on('tap','#editBtn',function(){
         var recipients = $('[name="recipients"]').val().trim();
@@ -51,7 +53,7 @@ $(function(){
                     mui.toast('修改地址成功');
                     setTimeout(function(){
                         location.href = 'address.html';
-                    },2000)
+                    },1000)
                 }
             }
         }) 

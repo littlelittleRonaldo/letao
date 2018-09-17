@@ -6,16 +6,6 @@ $(function(){
     var This;
     var p = 1;
     var n = 1;
-    function getParamsByUrl(url,name) {
-        var params = url.substr(url.indexOf('?')+1).split('&');
-        for(var i=0; i<params.length;i++){
-            var param = params[i].split('=');
-            if (param[0] == name) {
-                return param[1];
-            }
-        }
-        return null;
-    }
     var keyword = getParamsByUrl(location.href,'keyword');
     function getData() {
         if(!This){
