@@ -1,7 +1,6 @@
 $(function(){
-    $('.mui-action-back').on('tap',function(){
-        history.go(-1);
-        // location.go(-1);
+    $('.mui-action-back').on('click',function(){
+        history.back();
     });
     $('body').on('tap','a',function(){
         mui.openWindow({

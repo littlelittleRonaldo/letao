@@ -23,5 +23,7 @@ $(function(){
     $('.mui-table-view').on('tap','li',function(){
         var keyword = $(this).children().eq(0).text();
         location.href = "search-result.html?keyword="+keyword;
+        console.log(keyword);
+        console.log('ll');
     })
 })

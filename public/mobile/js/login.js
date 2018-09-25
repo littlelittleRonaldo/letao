@@ -24,6 +24,7 @@ $(function(){
                     setTimeout(function(){
                         if(localStorage.getItem('returnUrl')){
                             location.href = localStorage.getItem('returnUrl');
+                            localStorage.removeItem('returnUrl');
                         }else {
                             location.href = 'user.html';
                         }

@@ -15,7 +15,8 @@ $(function(){
 
     $('.mui-scroll').on('tap','.size span',function(){
         $(this).addClass('active').siblings().removeClass('active');
-        resize = parseInt($(this).text());
+        size = parseInt($(this).text());
+        console.log(size);
     });
 
     $('.mui-scroll').on('tap','.add',function(){
@@ -41,9 +42,9 @@ $(function(){
             },
             success:function(res){
                 if(res.success){
-                    mui.confirm('添加购物车成功，要去首页看看吗',function(message){
+                    mui.confirm('添加购物车成功，要去购物车看看吗',function(message){
                         if(message.index){
-                            location.href = 'index.html';
+                            location.href = 'cart.html';
                         }
                     })
                 }else if(res.error == 400){
